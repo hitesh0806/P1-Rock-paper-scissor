@@ -9,7 +9,7 @@ const gameswon=document.getElementById('gameswon');
 const gameslost=document.getElementById('gameslost');
 const gamestied=document.getElementById('gamestied');
 const totalgamesplayed=document.getElementById('totalgamesplayed');
-let score=
+let score=JSON.parse(localStorage.getItem('score'))||
 {
     wins:0,
     loss:0,
@@ -82,6 +82,7 @@ function playgame(playermove)
     {
       score.gp++
     }
+    localStorage.setItem('score',JSON.stringify(score));
     playermov.textContent='Player move: '+playermove;
     computermov.textContent='Computer move: '+computermove;
     result.textContent='Result: '+resul;
