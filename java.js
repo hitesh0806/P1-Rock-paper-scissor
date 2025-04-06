@@ -9,10 +9,14 @@ const gameswon=document.getElementById('gameswon');
 const gameslost=document.getElementById('gameslost');
 const gamestied=document.getElementById('gamestied');
 const totalgamesplayed=document.getElementById('totalgamesplayed');
-let x=0;
-let y=0;
-let z=0;
-let a=0;
+let score=
+{
+    wins:0,
+    loss:0,
+    ties:0,
+    gp:0,
+}
+
 function playgame(playermove)
 {
   let computermove = randommove()
@@ -64,27 +68,27 @@ function playgame(playermove)
         }
     if (resul==='win')
     {
-      x++;
+      score.wins++;
     }
     else if (resul==='lost')
     {
-      y++;
+      score.loss++;
     }
     else if (resul==='tie')
     {
-      z++;
+      score.ties++;
     }
     if (resul==='win'|| resul==='lost'|| resul==='tie')
     {
-      a++
+      score.gp++
     }
     playermov.textContent='Player move: '+playermove;
     computermov.textContent='Computer move: '+computermove;
     result.textContent='Result: '+resul;
-    gameswon.textContent='Games won: '+x;
-    gameslost.textContent='Games lost: '+y;
-    gamestied.textContent='Games tied: '+z;
-    totalgamesplayed.textContent='Games played: '+a;
+    gameswon.textContent='Games won: '+score.wins;
+    gameslost.textContent='Games lost: '+score.loss;
+    gamestied.textContent='Games tied: '+score.ties;
+    totalgamesplayed.textContent='Games played: '+score.gp;
 }
 function randommove()
 {
