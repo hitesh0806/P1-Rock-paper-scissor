@@ -78,13 +78,13 @@ function playgame(playermove)
     {
       a++
     }
-    computermov.textContent=computermove;
-    playermov.textContent=playermove;
-    result.textContent=resul;
-    gameslost.textContent=y;
-    gameswon.textContent=x;
-    gamestied.textContent=z;
-    totalgamesplayed.textContent=a;
+    playermov.textContent='Player move: '+playermove;
+    computermov.textContent='Computer move: '+computermove;
+    result.textContent='Result: '+resul;
+    gameswon.textContent='Games won: '+x;
+    gameslost.textContent='Games lost: '+y;
+    gamestied.textContent='Games tied: '+z;
+    totalgamesplayed.textContent='Games played: '+a;
 }
 function randommove()
 {
