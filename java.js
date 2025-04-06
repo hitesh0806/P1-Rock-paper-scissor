@@ -9,7 +9,7 @@ const gameswon=document.getElementById('gameswon');
 const gameslost=document.getElementById('gameslost');
 const gamestied=document.getElementById('gamestied');
 const totalgamesplayed=document.getElementById('totalgamesplayed');
-let score=
+let score=JSON.parse(localStorage.getItem('score'))||
 {
     wins:0,
     loss:0,
@@ -80,8 +80,9 @@ function playgame(playermove)
     }
     if (resul==='win'|| resul==='lost'|| resul==='tie')
     {
-      score.gp++
+      score.gp++;
     }
+    localStorage.setItem('score',JSON.stringify(score));
     playermov.textContent='Player move: '+playermove;
     computermov.textContent='Computer move: '+computermove;
     result.textContent='Result: '+resul;
@@ -108,4 +109,19 @@ function randommove()
     }
  }   
  return computermove;
+}
+resetbtn.onclick=function()
+{
+  localStorage.removeItem('score')
+  playermov.textContent='';
+  computermov.textContent='';
+  result.textContent='';
+  gameswon.textContent='';
+  gameslost.textContent='';
+  gamestied.textContent='';
+  totalgamesplayed.textContent='';
+  score.gp=0;
+  score.ties=0;
+  score.loss=0;
+  score.wins=0;
 }
