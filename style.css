@@ -1,0 +1,132 @@
+body
+{
+    background-image: url(rps.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+#buttons
+{
+    position:fixed;
+    left:42.5%;
+    top:30%;
+    padding:10px;
+}
+#rock
+{
+    padding:10px;
+    border-radius: 10px;
+    border:5px;
+    margin:3px;
+    background-color: rgb(218, 103, 103);
+    
+}
+#rock:hover
+{
+background-color:  rgb(219, 79, 79);
+}
+#paper:hover
+{
+background-color:  rgb(219, 79, 79);
+}
+#scissors:hover
+{
+background-color:  rgb(219, 79, 79);
+}
+#paper
+{
+    padding:10px;
+    border-radius: 10px;
+    border:5px;
+    margin:3px;
+    background-color: rgb(218, 103, 103);
+    
+}
+#scissors
+{
+    padding:10px;
+    border-radius: 10px;
+    border:5px;
+    margin:3px;
+    background-color: rgb(218, 103, 103);
+   
+}
+
+#reset
+{
+    position:fixed;
+    padding:5px;
+    margin:3px;
+    border-width: 0px;
+    border-style:solid;
+    border-color: rgb(0, 0, 0);
+    border-radius:5px;
+    background-color: rgb(35, 159, 71); 
+}
+#reset:hover
+{
+background-color:   rgb(29, 138, 60);
+}
+#results
+{
+    position:fixed;
+    left:42.5%;
+    top:40%;
+    padding:10px;
+    margin:10px;
+}
+#computermove
+{
+    position:fixed;
+    padding:5px;
+    margin:3px;
+    border-radius:5px;
+    background-color: rgb(27, 137, 173);
+}
+#result
+{
+    position:fixed;
+    padding:5px;
+    margin:3px;
+    border-radius:5px;
+    background-color: rgb(27, 137, 173); 
+}
+#gameswon
+{
+    position:fixed;
+    padding:5px;
+    margin:3px;
+    border-radius:5px;
+    background-color: rgb(26, 177, 69); 
+}
+#gameslost
+{
+    position:fixed;
+    padding:5px;
+    margin:3px;
+    border-radius:5px;
+    background-color: rgb(26, 177, 69); 
+}
+#gamestied
+{
+    position:fixed;
+    padding:5px;
+    margin:3px;
+    border-radius:5px;
+    background-color: rgb(26, 177, 69); 
+}
+#totalgamesplayed
+{
+    position:fixed;
+    padding:5px;
+    margin:3px;
+    border-radius:5px;
+    background-color: rgb(26, 177, 69); 
+}
+#playermove
+{
+    position:fixed;
+    padding:5px;
+    margin:3px;
+    border-radius:5px;
+    background-color: rgb(26, 177, 69); 
+}
